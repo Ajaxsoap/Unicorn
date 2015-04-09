@@ -1,0 +1,62 @@
+<template name="dashboard">
+  <div class="template-dashboard">
+    <h2>Dashboard</h2>
+  </div>
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h4>Enrollment</h4>
+    </div>
+    <div class="ibox-content">
+      <div class="m-t-sm">
+        <div class="row">
+          <div class="col-md-8">
+            <div>
+              <canvas id="lineChart" height="114"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="stat-list m-t-lg">
+              <li>
+                <h2 class="no-margins">550</h2>
+                <small>Total enrollments in a month</small>
+                <div class="progress progress-mini">
+                  <div class="progress-bar" style="width: 48%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h4>Claims</h4>
+    </div>
+    <div class="ibox-content">
+      <div class="m-t-sm">
+        <div class="row">
+          <div class="col-md-8">
+            <div>
+              <canvas id="lineChart" height="114"></canvas>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="stat-list m-t-lg">
+              <li>
+                <h2 class="no-margins ">150</h2>
+                <small>Total claims in a month</small>
+                <div class="progress progress-mini">
+                  <div class="progress-bar" style="width: 60%;"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>

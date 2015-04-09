@@ -1,0 +1,43 @@
+<template name="users">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h4>Users</h4>
+    </div>
+    <div class="ibox-content">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+
+            <tr>
+              <th></th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Confirm Password</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="enrollees">
+              <td></td>
+              <td><input type="text" name="username" value="" id="userName"></td>
+              <td><input type="text" name="email" value="" id="email"></td>
+              <td><input type="text" name="password" value="" id="password"></td>
+              <td><input type="text" name="confirmPassword" value="" id="confirm"></td>
+              <td><input type="submit" class="btn btn-default" value="Add User" id="submitBtn"></td>
+            </tr>
+            {{#each users }}
+            <tr>
+              <td><a class="" data-toggle="tooltip" data-placement="top" href="" title="Edit"><i class="fa fa-wrench"></i></a></td>
+              <td>{{username}}</td>
+              <td>{{email}}</td>
+              <td>{{password}}</td>
+              <td>{{confirmPassword}}</td>
+            </tr>
+            {{/each }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</template>

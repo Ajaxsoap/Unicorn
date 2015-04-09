@@ -1,0 +1,35 @@
+<template name="_navigation">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+        	<ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="profile-element">
+                    <span>
+                        <img alt="image" class="" src="/images/pinoyAko-Profile.jpg">
+                    </span>
+                </div>
+                <div class="logo-element">
+                    <img alt="image" class="" src="/images/favicons/favicon-32x32.png">
+                </div>
+            </li>
+            <li class="{{ isActiveRoute regex='home' }}">
+              <a href="{{ pathFor 'home' }}"><i class="fa fa-home"></i><span class="nav-label">Home</span></a>
+            </li>
+
+            <li class="{{ isActiveRoute regex='dashboard' }}">
+              <a href="{{ pathFor 'dashboard' }}"><i class="fa fa-tachometer"></i> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <li class="{{ isActiveRoute regex='enrollments' }}">
+              <a href="{{ pathFor 'enrollments' }}"><i class="fa fa-edit"></i> <span class="nav-label">Enrollment</span></a>
+            </li>
+            <li class="{{ isActiveRoute regex='claims' }}">
+              <a href="{{ pathFor 'claims' }}"><i class="fa fa-ambulance"></i> <span class="nav-label">Claims</span></a>
+            </li>
+            <li class="{{ isActiveRoute regex='users' }}">
+              <a href="{{ pathFor 'users' }}"><i class="fa fa-user"></i> <span class="nav-label">Users</span></a>
+            </li>
+
+          </ul>
+        </div>
+    </nav>
+</template>

@@ -1,0 +1,43 @@
+<template name="enrollments">
+  <div class="ibox float-e-margins">
+    <div class="ibox-title">
+      <h4>Enrollment</h4>
+    </div>
+    <div class="ibox-content">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+
+            <tr>
+              <th></th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Date of Birth</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="enrolles">
+              <td></td>
+              <td><input type="text" name="First Name" value="" id="firstName"></td>
+              <td><input type="text" name="Last Name" value="" id="lastName"></td>
+              <td><input type="text" name="Date of Birth" value="" id="dateOfBirth"></td>
+              <td><input type="text" name="Age" value="" id="age"></td>
+              <td><input type="submit" class="btn btn-default" value="" id="submitBtn"></td>
+            </tr>
+            {{#each enrollment }}
+            <tr>
+              <td><a class="" data-toggle="tooltip" data-placement="top" href="" title="Edit"><i class="fa fa-wrench"></i></a></td>
+              <td>{{firstName}}</td>
+              <td>{{lastName}}</td>
+              <td>{{dateOfBirth}}</td>
+              <td>{{age}}</td>
+            </tr>
+            {{/each }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</template>

@@ -1,0 +1,35 @@
+<template name="_header">
+  <div class="row border-bottom white-bg">
+
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        <span class="navbar-brand">PinoyAko Insurance System</span>
+                  <!-- <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
+                      <div class="form-group">
+                        <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                      </div>
+                  </form> -->
+    </div>
+
+    {{#if currentUser}}
+    <ul class="nav navbar-top-links navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-user"></i> {{ currentUser.profile.name }} <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#" data-action="logout"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Sign Out</a></li>
+        </ul>
+      </li>
+    </ul>
+    {{else}}
+    <div class="navbar-right">
+      <a href="{{ pathFor 'atSignIn' }}" class="btn btn-default navbar-btn">Sign in</a>
+      <a href="{{ pathFor 'atSignUp' }}" class="btn btn-primary navbar-btn">Register</a>
+    </div>
+    {{/if}}
+  </nav>
+
+  </div>
+</template>
